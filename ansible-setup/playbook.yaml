@@ -1,0 +1,12 @@
+---
+- name: Deploy TODO App
+  hosts: all
+  become: true
+  vars:
+    app_repo: "https://github.com/mabirhire1/DevOps-Stage-4"
+    app_dir: "/opt/todo-app"
+    domain: "mercyabi.name.ng"
+  
+  roles:
+    - dependencies
+    - deployment
